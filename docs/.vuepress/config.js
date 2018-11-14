@@ -1,6 +1,9 @@
 module.exports = {
   title: "Uniqys Kit Documentation",
   description: "A documentation for Uniqys Kit",
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: "/favicon.ico" }],
+  ],
   markdown: {
     lineNumbers: true
   },
