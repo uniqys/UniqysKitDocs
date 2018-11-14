@@ -17,7 +17,7 @@ Uniqys Kitの概要と使い方を説明します。
 
 - [Uniqys Kitとは](/ja/introduction/what-is-uniqys-kit.md)
 - [インストール](/ja/introduction/install.md)
-- [DAppsを作る](/ja/introduction/creating-dapps.md)
+- [Get Started](/ja/introduction/get-started.md)
 
 ## Uniqys CLI
 
