@@ -30,7 +30,8 @@ module.exports = {
             children: [
               "/ja/introduction/what-is-uniqys-kit",
               "/ja/introduction/install",
-              "/ja/introduction/creating-dapps"
+              "/ja/introduction/creating-dapps",
+              "/ja/introduction/get-started"
             ]
           },
           {
