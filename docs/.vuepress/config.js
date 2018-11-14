@@ -6,13 +6,16 @@ module.exports = {
   },
   locales: {
     "/": {
-      lang: "en-US"
+      lang: "en-US",
     },
     "/ja/": {
       lang: "ja-JP"
     }
   },
   themeConfig: {
+    nav: [
+      { text: 'uniqys.net', link: 'https://uniqys.net' },
+    ],
     locales: {
       "/": {
         label: "English",
@@ -23,6 +26,7 @@ module.exports = {
         label: "日本語",
         lastUpdated: "最終更新",
         selectText: "言語",
+        
         sidebar: [
           {
             title: "イントロダクション",
