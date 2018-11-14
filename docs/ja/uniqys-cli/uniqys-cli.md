@@ -5,7 +5,7 @@ title: Uniqys CLI
 # Uniqys CLI
 
 Uniqys CLIは、Uniqys Kitでブロックチェーンを作成、またはノードを立てるときに使うコマンドライン・インターフェースです。
-詳細な説明は[Uniqys CLIをインストール](/ja/introduction/install-uniqys-kit.md)した後、`uniqys --help`で確認してください。
+詳細な説明は[Uniqys CLIをインストール](/ja/introduction/install.md)した後、`uniqys --help`で確認してください。
 また、各種設定ファイルの詳細は[こちら](/ja/uniqys-cli/config-file.md)に記述しています。
 
 ## ノードの起動
@@ -34,3 +34,14 @@ uniqys start
 ```
 
 この後、ノードはネットワークに接続し、既にブロックチェーンが存在する場合は同期が開始します。
+
+## 開発用コマンド
+
+開発時には、`dev-init`コマンドを用いることで、素早く開発用ノードを立ち上げることができます。
+
+```sh
+uniqys dev-init
+```
+
+コマンド実行後にuniqys.json, dapp.json, validatorKey.jsonが生成されます。
+そして、`uniqys start`によってノードが立ち上げることができます。

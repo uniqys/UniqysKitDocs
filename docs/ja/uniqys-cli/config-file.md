@@ -6,16 +6,16 @@ title: 設定ファイル
 
 Uniqys Kitには、ノードを起動する際に必要な設定ファイルがいくつかあります。
 
-それぞれの設定ファイルのデフォルト名はkey.json, dapp.json, uniqys.jsonとなっていますが、設定やコマンドラインで自由に変更することができます。
+それぞれの設定ファイルのデフォルト名はvalidatorKey.json, dapp.json, uniqys.jsonとなっていますが、設定やコマンドラインで自由に変更することができます。
 このページでは、デフォルトのファイル名を用いて説明します。
 
-## key.json
+## validatorKey.json
 
-key.jsonはアドレスが記述されたファイルです。
+validatorKey.jsonはアドレスが記述されたファイルです。
 Uniqys CLIの`gen-key`コマンドで生成することができます。
 
 ```sh
-uniqys gen-key /path/to/key.json
+uniqys gen-key /path/to/validatorKey.json
 ```
 
 `gen-key`コマンドを実行すると、以下のようなアドレスが記述されたファイルが生成されます。
@@ -35,6 +35,10 @@ uniqys gen-key /path/to/key.json
 | `privateKey` | アドレスの秘密鍵：公開せずに保持する |
 | `publicKey` | アドレスの公開鍵：公開する必要はない |
 | `address` | アドレス：トランザクションやステーキングに用いられ、公開される |
+
+:::warning 注意
+`gen-key`コマンドの実行時に出力パスを指定しない場合は、デフォルトでkey.jsonというファイル名になります。
+:::
 
 ## dapp.json
 

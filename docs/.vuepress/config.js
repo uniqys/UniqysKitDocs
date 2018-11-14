@@ -55,9 +55,8 @@ module.exports = {
             collapsable: false,
             children: [
               "/ja/easy-framework/easy-framework",
-              "/ja/easy-framework/easy-client",
-              "/ja/easy-framework/outer-api",
-              "/ja/easy-framework/inner-api"
+              "/ja/easy-framework/api",
+              "/ja/easy-framework/easy-client"
             ]
           }
         ]
