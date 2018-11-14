@@ -10,7 +10,7 @@ Easy Frameworkには、アカウント情報やトランザクションの状態
 
 Outer APIはアカウント情報やトランザクションの状態を確認できるAPIです。
 `gateway`のアドレスのルートに`/uniqys`を付加したアドレスに送信すれば、外部からアクセスが可能です。（例：`GET https://example.com/uniqys/awaiting/{id}`）
-Easy Clientを利用する場合は、[EasyClient.api](#)のメソッドを利用してアクセスすることも可能です。
+Easy Clientを利用する場合は、[EasyClient.api](/ja/easy-framework/easy-client.md#easyclient-api)のメソッドを利用してアクセスすることも可能です。
 
 ### `GET /awaiting/{id}`
 

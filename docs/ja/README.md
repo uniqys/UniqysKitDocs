@@ -40,5 +40,4 @@ Easy Frameworkの概要と詳細を説明します。
 
 - [Easy Framework](/ja/easy-framework/easy-framework.md)
 - [Easy Client](/ja/easy-framework/easy-client.md)
-- [Outer API](/ja/easy-framework/outer-api.md)
-- [Inner API](/ja/easy-framework/inner-api.md)
+- [Outer API / Inner API](/ja/easy-framework/api.md)
