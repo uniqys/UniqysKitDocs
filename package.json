@@ -1,4 +1,8 @@
 {
+  "name": "uniqys-kit-docs",
+  "description": "A documenation for Uniqys Kit",
+  "author": "Uniqys Project (https://uniqys.net)",
+  "private": true,
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"

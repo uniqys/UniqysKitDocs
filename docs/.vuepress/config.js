@@ -46,8 +46,7 @@ module.exports = {
             collapsable: false,
             children: [
               "/ja/chain-core/chain-core",
-              "/ja/chain-core/consensus",
-              "/ja/chain-core/block-structure"
+              "/ja/chain-core/blockchain"
             ]
           },
           {

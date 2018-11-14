@@ -31,8 +31,7 @@ Uniqys CLIを用いたUniqysの操作、設定ファイル等の詳細を説明�
 Chain Coreの概要と詳細を説明します。
 
 - [Chain Core](/ja/chain-core/chain-core.md)
-- [コンセンサスアルゴリズム](/ja/chain-core/consensus.md)
-- [ブロック構成](/ja/chain-core/block-structure.md)
+- [ブロックチェーン](/ja/chain-core/blockchain.md)
 
 ## Easy Framework
 

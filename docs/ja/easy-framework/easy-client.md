@@ -20,7 +20,7 @@ yarn add @uniqys/easy-client
 ```
 
 `node_modules/@uniqys/easy-client/lib/easy.js`には既にバンドルされたEasy Clientがあり、サーバーから`easy.js`を配信することでクライアントで利用することができます。
-`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#)をexportしています。
+`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#easyclientforbrowser)をexportしています。
 
 ```html
 <script type="text/javascript" src="/path/to/easy.js"></script>
@@ -43,7 +43,7 @@ const easy = EasyClient(signer, config)
 - **signer**: 署名に必要なオブジェクト。詳細は`easy-client`パッケージの`Signer`を参照してください。
 - **config**: EasyClientで用いる`AxiosRequestConfig`。詳細は[Axios](https://github.com/axios/axios)を参照してください。
 
-### EasyClient.<request_type>
+### EasyClient.\<request type\>
 
 以下のリクエストに対応しています。
 
