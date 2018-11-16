@@ -1,6 +1,9 @@
 ---
 title: ホームページ
 ---
+<div align="center">
+    <a href="https://uniqys.net/kit" target="_blank" style="height: '100%'"><img width="320" src="/UniqysKit-logo.png" alt="Uniqys Kit logo" /></a>
+</div>
 
 # Uniqys Kit Documentation
 
