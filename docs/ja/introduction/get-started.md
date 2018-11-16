@@ -3,8 +3,8 @@ title: Get Started
 ---
 
 # Get Started  
-Uniqys Kitの[Easy Framework](/ja/easy-framework/easy-framework.md)を使用することで、デベロッパは普通のWeb開発と同じくREST APIを実装するだけでDApp開発ができます。  
-今回はPythonでメッセージをGet/SetできるDAppを実装します。
+Uniqys Kitの[Easy Framework](/ja/easy-framework/easy-framework.md)を使用することで、デベロッパは普通のWeb開発と同じくREST APIとWebフロントエンドを実装するだけでDApp開発ができます。  
+今回はPythonでメッセージをGet/SetできるDAppを作ってみましょう。
 
 ## Uniqys Kit
 前の章でインストールしたUniqys CLIの`dev-init`サブコマンドを用いて、バリデータが1人の開発用のノードのconfigを生成します。
@@ -21,8 +21,8 @@ dapp.json uniqys.json validatorKey.json
 ```
 
 
-## DApp
-DAppの開発に必要なライブラリをインストールします。HTTPサーバには[bottle](https://bottlepy.org)を、ブロックチェーンのストアの操作には[pymemcache](https://github.com/pinterest/pymemcache)を使用します。
+## サーバサイド
+サーバサイドに必要なライブラリをインストールします。今回はPythonで実装するので、HTTPサーバには[bottle](https://bottlepy.org)を、ブロックチェーンのストアの操作には[pymemcache](https://github.com/pinterest/pymemcache)を使用します。
 
 ```bash
 $ pip install bottle pymemcache
@@ -70,7 +70,7 @@ run(host=APP_HOST, port=APP_PORT)
 ```
 
 ## フロントエンド
-実装したDAppをWebから呼び出します。Uniqys KitのEasy Clientを使用することで[axios](https://github.com/axios/axios)に似たインターフェースで実装が可能です。
+実装したAPIをフロントエンドから呼び出します。Uniqys KitのEasy Clientを使用することで[axios](https://github.com/axios/axios)に似たインターフェースで実装が可能です。
 
 ```html
 <!DOCTYPE html>

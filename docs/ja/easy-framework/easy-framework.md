@@ -27,6 +27,12 @@ Signed Requestは、ユーザが署名をしたリクエストを指し、主に
 このタイプのリクエストは直接アプリケーションに送信されるのではなく、Chain Coreを経由してからアプリケーションに送信されます。
 ですから、Signed Requestがアプリケーションに送信されるまでに、Chain Coreによってブロックチェーンに取り込まれるまでの時間がかかります。
 
+### Memcached Protocol
+
+Uniqys Kitを用いたDApps開発では、Easy Frameworkがデータベースを提供します。
+そのデータベースを操作するMemcachedサーバが提供されるため、データベースへのアクセスをMemcachedクライアントを用いて行うことができます。
+既存のMemcachedクライアントライブラリを用いることも可能です。
+
 ### Outer API / Inner API
 
 Outer APIとInner APIはDApps内のアカウントのマネジメントをするためのAPIで、トランザクションのステータス確認、アカウント情報の確認・操作をする機能があります。
@@ -34,9 +40,3 @@ Outer APIとInner APIはDApps内のアカウントのマネジメントをする
 Outer APIはGatewayで提供していて、トランザクションのステータスやアカウントの情報を確認することができます。
 Inner APIはOuter APIと同様の機能に加え、アカウントのトークン残高の操作をすることができます。
 詳しい使い方は[こちら](/ja/easy-framework/api.md)で確認してください。
-
-### Memcached Protocol
-
-Uniqys Kitを用いたDApps開発では、Easy Frameworkがデータベースを提供します。
-そのデータベースを操作するMemcachedサーバが提供されるため、データベースへのアクセスをMemcachedクライアントを用いて行うことができます。
-既存のMemcachedクライアントライブラリを用いることも可能です。
