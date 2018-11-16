@@ -4,6 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: "/favicon.ico" }],
   ],
+  base: "/UniqysKitDocs/",
   markdown: {
     lineNumbers: true
   },
