@@ -1,5 +1,5 @@
 ---
-title: ホームページ
+title: Uniqys Kit Documentation
 ---
 <div align="center">
     <a href="https://uniqys.net/kit" target="_blank" style="height: '100%'">
