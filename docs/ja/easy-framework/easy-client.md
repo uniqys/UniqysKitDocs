@@ -11,7 +11,7 @@ Easy Clientは、クライアント側でリクエストに署名をし、トラ
 
 Easy Clientはnpmで公開されています。`npm`コマンドまたは`yarn`コマンドを用いてインストールできます。
 
-```sh
+```bash
 # Using npm
 npm install @uniqys/easy-client
 

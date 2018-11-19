@@ -39,7 +39,7 @@ uniqys start
 
 開発時には、`dev-init`コマンドを用いることで、素早く開発用ノードを立ち上げることができます。
 
-```sh
+```bash
 uniqys dev-init
 ```
 

@@ -4,7 +4,7 @@ This repository contains the documentation for Uniqys Kit published at <https://
 
 ## Usage
 
-```sh
+```bash
 # Setup
 yarn
 # To run development server
