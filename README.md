@@ -1,15 +1,14 @@
-# Uniqys Docs
+# Uniqys Kit Documentation
 
-## Development
+This repository contains the documentation for Uniqys Kit published at <https://uniqys.github.io/UniqysKitDocs>.
 
-```sh
-yarn
-yarn run dev
-```
+## Usage
 
-## Build
-
-```sh
-yarn
-yarn run build
+```bash
+# Setup
+$ yarn
+# To run development server
+$ yarn run dev
+# To build
+$ yarn run build
 ```
