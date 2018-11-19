@@ -13,10 +13,10 @@ Easy Clientはnpmで公開されています。`npm`コマンドまたは`yarn`�
 
 ```bash
 # Using npm
-npm install @uniqys/easy-client
+$ npm install @uniqys/easy-client
 
 # Using yarn
-yarn add @uniqys/easy-client
+$ yarn add @uniqys/easy-client
 ```
 
 `node_modules/@uniqys/easy-client/lib/easy.js`には既にバンドルされたEasy Clientがあり、サーバーから`easy.js`を配信することでクライアントで利用することができます。
@@ -34,7 +34,7 @@ const easy = new Easy(location.origin) // EasyClientForBrowser
 
 ### EasyClient
 
-```
+```js
 const easy = EasyClient(signer, config)
 ```
 
@@ -84,7 +84,7 @@ Outer APIの仕様に関しては、[こちら](/ja/easy-framework/api.md#outer-
 また、現在公式のウォレットはありませんが、独自でウォレットを開発する場合は`EasyClient`を用いて開発する必要があります。
 :::
 
-```
+```js
 const easy = EasyClientForBrowser(baseUrl)
 ```
 

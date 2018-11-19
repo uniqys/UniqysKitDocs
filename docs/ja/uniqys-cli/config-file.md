@@ -15,7 +15,7 @@ validatorKey.jsonはアドレスが記述されたファイルです。
 Uniqys CLIの`gen-key`コマンドで生成することができます。
 
 ```bash
-uniqys gen-key /path/to/validatorKey.json
+$ uniqys gen-key /path/to/validatorKey.json
 ```
 
 `gen-key`コマンドを実行すると、以下のようなアドレスが記述されたファイルが生成されます。
@@ -49,7 +49,7 @@ genesisブロックの情報を含んでいるため、そのチェーンを維�
 一からブロックチェーンを生成する場合は、Uniqys CLIの`dapp-conf`コマンドで生成することができます。
 
 ```bash
-uniqys dapp-conf /path/to/dapp.json
+$ uniqys dapp-conf /path/to/dapp.json
 ```
 
 `dapp-conf`コマンドを実行すると、以下のような設定ファイルのひな形が生成されます。
@@ -101,7 +101,7 @@ uniqys.jsonはノードの設定ファイルです。
 Uniqys CLIの`init`コマンドを実行すると同時に生成されます。
 
 ```bash
-uniqys init /path/to/dapp.json
+$ uniqys init /path/to/dapp.json
 ```
 
 `init`コマンドを実行すると、以下のような設定ファイルのひな形が生成されます。

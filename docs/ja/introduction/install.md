@@ -11,15 +11,15 @@ Uniqys Kitをインストールするには、Node.js v10.9.0以降が必要で�
 
 ```bash
 # ndenvをインストールした後に実行
-ndenv install v10.9.0
-ndenv global v10.9.0
+$ ndenv install v10.9.0
+$ ndenv global v10.9.0
 ```
 
 ::: warning 注意
 他のプログラムでシステムにインストールされたNode.jsを利用している場合は、動作しなくなる可能性があります。
 Node.jsのバージョンを戻すには以下を実行してください。
 ```bash
-ndenv global system
+$ ndenv global system
 ```
 :::
 
@@ -29,7 +29,7 @@ Uniqys CLIはUniqys Kitを使うためのコマンドライン・インターフ
 npmで公開されていて、簡単にインストールすることができます。
 
 ```bash
-npm install -g @uniqys/cli
+$ npm install -g @uniqys/cli
 ```
 
 以下のコマンドでインストールされたことを確認できます。

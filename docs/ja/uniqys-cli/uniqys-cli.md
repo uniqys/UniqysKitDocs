@@ -12,16 +12,16 @@ Uniqys CLIは、Uniqys Kitでブロックチェーンを作成、またはノー
 
 まず、新たなブロックチェーンを生成する場合は、dapp.jsonを生成する必要があります。
 
-```
-uniqys dapp-conf /path/to/dapp.json
+```bash
+$ uniqys dapp-conf /path/to/dapp.json
 ```
 
 既にあるブロックチェーンのネットワークに参加する場合は、公開されたdapp.jsonを利用してください。
 
 次に、DAppを初期化します。
 
-```
-uniqys init /path/to/dapp.json
+```bash
+$ uniqys init /path/to/dapp.json
 ```
 
 DAppを初期化したときに、uniqys.jsonという設定ファイルが出力されます。
@@ -29,8 +29,8 @@ DAppを初期化したときに、uniqys.jsonという設定ファイルが出�
 
 最後に、起動します。
 
-```
-uniqys start
+```bash
+$ uniqys start
 ```
 
 この後、ノードはネットワークに接続し、既にブロックチェーンが存在する場合は同期が開始します。
@@ -40,7 +40,7 @@ uniqys start
 開発時には、`dev-init`コマンドを用いることで、素早く開発用ノードを立ち上げることができます。
 
 ```bash
-uniqys dev-init
+$ uniqys dev-init
 ```
 
 コマンド実行後にuniqys.json, dapp.json, validatorKey.jsonが生成されます。

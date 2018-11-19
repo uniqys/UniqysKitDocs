@@ -6,9 +6,9 @@ This repository contains the documentation for Uniqys Kit published at <https://
 
 ```bash
 # Setup
-yarn
+$ yarn
 # To run development server
-yarn run dev
+$ yarn run dev
 # To build
-yarn run build
+$ yarn run build
 ```
