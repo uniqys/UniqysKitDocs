@@ -4,34 +4,38 @@ title: Get Started
 
 # Get Started
 
-Uniqys Kitの[Easy Framework](/ja/easy-framework/easy-framework.md)を使用することで、デベロッパは普通のWeb開発と同じくREST APIとWebフロントエンドを実装するだけでDApp開発ができます。
+Using Easy Framework allows developers to build DApps like a conventional web application.
+All you need to do is to implement REST API and web frontend.
 
-今回はPythonでメッセージをGet/SetできるDAppを作ってみましょう。
+In this guide, we will be creating a simple Python DApp that can get/set a message.
 
 ## Uniqys Kit
 
-前の章でインストールしたUniqys CLIの`dev-init`サブコマンドを用いて、バリデータが1人の開発用のノードのconfigを生成します。
+First, you need to create config files to launch development blockchain with one validator.
+
+Run `dev-init` command with Uniqys CLI.
 
 ```bash
 $ uniqys dev-init
 ```
 
-3つのjsonファイルが生成されます。
+You will see three JSON files.
 
 ```bash
 $ ls
 dapp.json uniqys.json validatorKey.json
 ```
 
-## サーバサイド
+## Server Side
 
-サーバサイドに必要なライブラリをインストールします。今回はPythonで実装するので、HTTPサーバには[bottle](https://bottlepy.org)を、ブロックチェーンのストアの操作には[pymemcache](https://github.com/pinterest/pymemcache)を使用します。
+We will start by building a server-side REST API.
+This time we will be implementing with Python, so we will use [bottle](https://bottlepy.org) for the HTTP server, and [pymemcache](https://github.com/pinterest/pymemcache) for database management.
 
 ```bash
 $ pip install bottle pymemcache
 ```
 
-messageをSet/Getするだけの簡単なREST APIを実装します。
+Implement REST API with simple get/set of a message. We will name this file `main.py`.
 
 ```python
 import json
@@ -64,14 +68,17 @@ def index():
 run(host=APP_HOST, port=APP_PORT)
 ```
 
-## フロントエンド
+## Frontend
 
-実装したAPIをフロントエンドから呼び出します。Uniqys KitのEasy Clientを使用することで[axios](https://github.com/axios/axios)に似たインターフェースで実装が可能です。
+Now, we need to implement a frontend that can call the server side REST API.
+By using Easy Client, you can implement API calls with [axios](https://github.com/axios/axios)-like interface.
+Create `index.html` as below.
 
 ```html
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
+  <!-- This time we will be using CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@uniqys/easy-client/lib/easy.js"></script>
   <script>
     var client = new Easy('http://localhost:8080');
@@ -102,9 +109,9 @@ run(host=APP_HOST, port=APP_PORT)
 </html>
 ```
 
-## 起動
+## Run
 
-これまでの作業でディレクトリ構成は以下の通りになっているはずです。
+The directory structure should be as follows with the work so far.
 
 ```bash
 $ tree -L 1 .
@@ -116,14 +123,14 @@ $ tree -L 1 .
 └── validatorKey.json
 ```
 
-`dapp.json`の`startApp`にDAppの起動コマンドを指定します。
+Specify the start command for DApp in `startApp` of `dapp.json`.
 
 ```diff
 - "startApp": "echo \"no start command specified\""
 + "startApp": "python -u main.py"
 ```
 
-Uniqys CLIの`start`サブコマンドでブロックチェーンノードとDAppを立ち上げます。
+Launch a validator node and the DApp with `start` command in Uniqys CLI.
 
 ```bash
 $ uniqys start
@@ -146,4 +153,4 @@ Hit Ctrl-C to quit.
   chain-core:consensus new height 3 with app state c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 +2ms
 ```
 
-ブラウザで[`http://localhost:8080/`](http://localhost:8080/)を開けば動いているDAppを確認できます。
+Open [`http://localhost:8080/`](http://localhost:8080/) to see the DApp working.

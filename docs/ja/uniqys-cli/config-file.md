@@ -142,7 +142,7 @@ uniqys.jsonの各キーは以下のような意味を持ちます。
 | --- | --- |
 | `dapp` | dapp.jsonのパス |
 | `dataDir` | .dataディレクトリのパス |
-| `validatorKey` | このノードのアドレスとして用いるキーが記述されているkey.json |
+| `validatorKey` | このノードのアドレスとして用いるキーが記述されているvalidatorKey.json |
 | `easy` | Easy Frameworkのネットワーク設定 |
 | ┣ `gateway` | Gatewayのネットワーク設定 |
 | ┣ `app` | DAppのネットワーク設定 |
