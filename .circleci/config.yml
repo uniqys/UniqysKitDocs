@@ -1,0 +1,58 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@0.0.4
+
+jobs:
+  build:
+    executor: node/node
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: install dependency
+                command: yarn
+          dir: ~/.cache/yarn
+          cache-key: yarn.lock
+      - run:
+          name: build docs
+          command: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+              - ./docs/.vuepress/dist/
+  deploy:
+    machine: true
+    steps:
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "84:17:74:0f:e4:9c:0b:b1:9b:28:3e:59:bc:9f:d5:99"
+      - run:
+          name: initialize git
+          command: |
+            git init .
+            git config --global user.name "Uniqys Project"
+            git config --global user.email "contact@uniqys.net"
+          working_directory: ./docs/.vuepress/dist/
+      - run:
+          name: deploy to gh-pages
+          command: |
+            git checkout -b gh-pages
+            git add ./
+            git commit -m 'Update [ci skip]'
+            git push -f git@github.com:uniqys/UniqysKitDocs.git gh-pages
+          working_directory: ./docs/.vuepress/dist/
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: source
