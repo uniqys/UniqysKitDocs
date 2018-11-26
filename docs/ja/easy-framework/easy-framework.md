@@ -11,7 +11,7 @@ Easy Frameworkを用いることで、デベロッパはブロックチェーン
 
 Easy Frameworkはアプリケーション、クライアント、Chain Coreのコネクションの仲介となり、リクエストの仕分けやブロックチェーン用のデータベースの提供、アカウント情報の処理を担います。
 
-<img :src="$withBase('/uniqys-overview.png')" alt="niqys Overview">
+<img :src="$withBase('/uniqys-overview.png')" alt="Uniqys Overview">
 
 ### Gateway
 

@@ -30,6 +30,8 @@ npmで公開されていて、簡単にインストールすることができ�
 
 ```bash
 $ npm install -g @uniqys/cli
+# or
+$ yarn global add @uniqys/cli
 ```
 
 以下のコマンドでインストールされたことを確認できます。

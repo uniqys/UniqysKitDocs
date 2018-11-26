@@ -24,7 +24,44 @@ module.exports = {
       "/": {
         label: "English",
         lastUpdated: "Last Updated",
-        selectText: "Languages"
+        selectText: "Languages",
+
+        sidebar: [
+          {
+            title: "Introduction",
+            collapsable: false,
+            children: [
+              "/introduction/what-is-uniqys-kit",
+              "/introduction/install",
+              "/introduction/get-started"
+            ]
+          },
+          {
+            title: "Uniqys CLI",
+            collapsable: false,
+            children: [
+              "/uniqys-cli/uniqys-cli",
+              "/uniqys-cli/config-file"
+            ]
+          },
+          {
+            title: "Chain Core",
+            collapsable: false,
+            children: [
+              "/chain-core/chain-core",
+              "/chain-core/blockchain"
+            ]
+          },
+          {
+            title: "Easy Framework",
+            collapsable: false,
+            children: [
+              "/easy-framework/easy-framework",
+              "/easy-framework/api",
+              "/easy-framework/easy-client"
+            ]
+          }
+        ]
       },
       "/ja/": {
         label: "日本語",
