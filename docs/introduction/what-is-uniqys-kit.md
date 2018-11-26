@@ -4,14 +4,12 @@ title: What is Uniqys Kit?
 
 # What is Uniqys Kit?
 
-Uniqys Kit is a blockchain platform, designed for developers to easily build and users to casually use decentralized application (DApps).
-
-## Motivation
+Uniqys Kit is a blockchain platform designed for developers to easily create, and users to casually use decentralized application (DApps).
 
 In a design where transactions of multiple DApps are handled in one blockchain, when a large number of transactions are issued at a certain DApp, the performance of the entire chain is degraded.
-As a result, other DApps will have adverse effects such as delayed uptake of transactions.
-With this, the barriers for new developers to build a new DApp is large, and our goal which is to "Make DApps closer to users" will be far away.
-Uniqys Kit is one of the solutions to that problem.
+Developers are able to build their own blockchain to avoid influence from other DApps, but the learning cost for building a blockchain and very high, and it is hard to maintain the security even when they built one.
+As a result, there is a large barrier for new developers to create a new DApp, and our goal, to "Make DApps closer to users", will be far away.
+Uniqys Kit is one of the solution for that problem.
 
 Uniqys Kit has two main components: Chain Core and Easy Framework.
 Chain Core provides a blockchain infrastructure that works as a sidechain.
@@ -21,18 +19,24 @@ With Easy Framework, creating DApps will be the same as building conventional we
 
 ## Blockchain For DApps
 
-Uniqys Kit targets strictly to be a useful toolkit for DApps developers, and the adopted technologies are due to consideration of DApps development.
-The blockchain uses sidechain, a unique chain for every single DApp that can conserve security with connection to a major chain (e.g. Ethereum).
-The consensus algorithm is PoS (Proof of Stake) with PBFT based algorithm which gives finality to the blockchain.
-These two technologies were chosen because DApps engineers are able to achieve these benefits:
+Uniqys Kit aims to be a useful toolkit for DApps developers, and thereby the adopted technologies are due to consideration of DApps development.
 
-- Less transaction fee during DApps usage
+Unlike Bitcoin and Ethereum, Uniqys Kit creates a unique blockchain for every single DApp to increase the transaction throughput.
+However, it will be hard for developers to gather blockchain validators especially right after the DApps release.
+Our approach to solving that problem is implementing a sidechain function: a link to a major chain to preserve the security.
+
+The consensus algorithm is PoS (Proof of Stake) with PBFT based algorithm which gives finality to the blockchain.
+
+These two technologies were chosen because DApps engineers are able to receive these benefits:
+
+- Less transaction fee
 - Short waiting time for transactions to be approved
 - Secure blockchain with few validators
 
 ## HTTP Request as a Transaction
 
-Easy Framework considers every HTTP requests that modify the application state as a transaction.
-Easy Client, a client-side javascript package integrated into Easy Framework, enables users to sign the request and send it to the server.
-Signed requests will be handled as an authenticated request in Easy Framework.
-Therefore, all the interactions with blockchain are covered with Easy Framework, enabling DApps developers to minimize the learning cost for building a blockchain.
+Easy Framework considers every HTTP request that modifies the database as a transaction.
+Those transactions are signed with the Easy Client, a client-side javascript package integrated into Easy Framework.
+Signed requests will be sent to the Easy Framework and handled as an authenticated request.
+
+All the interactions with blockchain are covered with Easy Framework, and for that DApps developers are able to minimize the learning cost for building a blockchain.

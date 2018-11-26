@@ -22,9 +22,9 @@ In Easy Framework, Gateway classifies requests from clients to two types: Normal
 Normal Request indicates `GET` requests which do not modify the database.
 For example, a simple request that fetches HTML from the website is a Normal Request.
 Once Gateway receives Normal Request, it will send directly to the application.
-And the response for that request will go through the Gateway before it is sent back to the client.
+And the response will be sent back to the client via Gateway.
 
-Signed Request indicates requests like `POST` and `PUT` which modifies the database.
+Signed Request indicates requests of `POST` and `PUT` which modifies the database.
 It requires the user's signature.
 This type of request is not directly sent to the application, but is sent via Chain Core.
 Therefore, users have to wait for the Chain Core to include the Signed Request in the blockchain, to receive the response from the application.
@@ -33,7 +33,7 @@ Therefore, users have to wait for the Chain Core to include the Signed Request i
 
 In DApps development with Uniqys Kit, Easy Framework provides the database.
 Easy Framework provides Memcached server to control the database from the application.
-Applications are able to use pre-existing Memcache client libraries as we use in building conventional web applications.
+Applications are able to use pre-existing Memcached client libraries.
 
 ### Outer API / Inner API
 
