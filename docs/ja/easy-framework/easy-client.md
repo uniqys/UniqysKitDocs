@@ -23,7 +23,7 @@ $ yarn add @uniqys/easy-client
 ```html
 <script type="text/javascript" src="/path/to/easy.js"></script>
 <script type="text/javascript">
-const easy = new Easy(location.origin) // EasyClientForBrowser
+const easy = new Easy.Browser(location.origin) // EasyClientForBrowser
 ...
 </script>
 ```

@@ -81,7 +81,7 @@ Create `index.html` as below.
   <!-- This time we will be using CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@uniqys/easy-client/lib/easy.js"></script>
   <script>
-    var client = new Easy('http://localhost:8080');
+    var client = new Easy.Browser('http://localhost:8080');
 
     function update() {
       var e = document.querySelector('#message');

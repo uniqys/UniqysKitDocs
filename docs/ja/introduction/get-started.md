@@ -74,7 +74,7 @@ run(host=APP_HOST, port=APP_PORT)
   <meta charset="UTF-8">
   <script src="https://cdn.jsdelivr.net/npm/@uniqys/easy-client/lib/easy.js"></script>
   <script>
-    var client = new Easy('http://localhost:8080');
+    var client = new Easy.Browser('http://localhost:8080');
 
     function update() {
       var e = document.querySelector('#message');
