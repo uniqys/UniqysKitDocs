@@ -23,7 +23,7 @@ In path `node_modules/@uniqys/easy-client/lib/easy.js` there is a pre-bundled Ea
 ```html
 <script type="text/javascript" src="/path/to/easy.js"></script>
 <script type="text/javascript">
-const easy = new Easy(location.origin) // EasyClientForBrowser
+const easy = new Easy.Browser(location.origin) // EasyClientForBrowser
 ...
 </script>
 ```
