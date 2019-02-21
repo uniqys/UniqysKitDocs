@@ -35,7 +35,7 @@ messageをSet/Getするだけの簡単なREST APIを実装します。
 
 ```python
 import json
-from bottle import route, run, request, static_file
+from bottle import route, run, request, response, static_file
 from pymemcache.client import Client
 
 DB_HOST = 'localhost'
@@ -47,8 +47,11 @@ db = Client((DB_HOST, DB_PORT))
 
 @route('/message')
 def get_message():
-    message = db.get('message').decode('utf8')
-    return {'message': message}
+    message = db.get('message')
+    if message is not None:
+        decoded = message.decode('utf8')
+        return {'message': decoded}
+    response.status = 400
 
 @route('/message', method='POST')
 def post_message():
