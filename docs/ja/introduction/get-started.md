@@ -51,7 +51,7 @@ def get_message():
     if message is not None:
         decoded = message.decode('utf8')
         return {'message': decoded}
-    response.status = 400
+    response.status = 404
 
 @route('/message', method='POST')
 def post_message():
