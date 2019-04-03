@@ -7,19 +7,19 @@ title: Installation
 ## Node.js
 
 You need Node.js v10.9.0 or later to install Uniqys Kit.
-Using [ndenv](https://github.com/riywo/ndenv) is recommended.
+Using [nodenv](https://github.com/nodenv/nodenv) is recommended.
 
 ```bash
-# After installing ndenv
-$ ndenv install v10.9.0
-$ ndenv global v10.9.0
+# After installing nodenv
+$ nodenv install 10.9.0
+$ nodenv global 10.9.0
 ```
 
 ::: warning
 If you are using Node.js installed in the system in other programs, it may stop working.
 Run below to restore the Node.js version.
 ```bash
-$ ndenv global system
+$ nodenv global system
 ```
 :::
 
@@ -38,5 +38,5 @@ You may check if it is correctly installed with below command.
 
 ```bash
 $ uniqys -v
-0.1.1
+0.3.0
 ```

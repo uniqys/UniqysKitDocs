@@ -7,19 +7,19 @@ title: インストール
 ## Node.js
 
 Uniqys Kitをインストールするには、Node.js v10.9.0以降が必要です。
-[ndenv](https://github.com/riywo/ndenv)を用いると簡単にインストールできます。
+[nodenv](https://github.com/nodenv/nodenv)を用いると簡単にインストールできます。
 
 ```bash
-# ndenvをインストールした後に実行
-$ ndenv install v10.9.0
-$ ndenv global v10.9.0
+# nodenvをインストールした後に実行
+$ nodenv install 10.9.0
+$ nodenv global 10.9.0
 ```
 
 ::: warning 注意
 他のプログラムでシステムにインストールされたNode.jsを利用している場合は、動作しなくなる可能性があります。
 Node.jsのバージョンを戻すには以下を実行してください。
 ```bash
-$ ndenv global system
+$ nodenv global system
 ```
 :::
 
@@ -38,5 +38,5 @@ $ yarn global add @uniqys/cli
 
 ```bash
 $ uniqys -v
-0.1.1
+0.3.0
 ```
