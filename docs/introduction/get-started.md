@@ -39,7 +39,7 @@ Implement REST API with simple get/set of a message. We will name this file `mai
 
 ```python
 import json
-from bottle import route, run, request, static_file
+from bottle import route, run, request, response, static_file
 from pymemcache.client import Client
 
 DB_HOST = 'localhost'
