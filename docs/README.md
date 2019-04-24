@@ -45,3 +45,9 @@ Overview and details of Easy Framework.
 - [Easy Framework](/easy-framework/easy-framework.md)
 - [Easy Client](/easy-framework/easy-client.md)
 - [Outer API / Inner API](/easy-framework/api.md)
+
+## Event Provider
+
+Overview and details of Event Provider.
+
+- [Event Provider](/event-provider/event-provider.md)
