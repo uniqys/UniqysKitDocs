@@ -38,5 +38,5 @@ You may check if it is correctly installed with below command.
 
 ```bash
 $ uniqys -v
-0.3.0
+0.3.2
 ```
