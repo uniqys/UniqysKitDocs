@@ -45,3 +45,9 @@ $ uniqys dev-init
 
 コマンド実行後にuniqys.json, dapp.json, validatorKey.jsonが生成されます。
 そして、`uniqys start`によってノードが立ち上げることができます。
+
+ブロックチェーンのデータ `.data` を削除したい場合は `init` コマンドに `--reset` オプションをつけてください。
+
+```bash
+$ uniqys init --reset
+```

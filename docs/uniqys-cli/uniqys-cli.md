@@ -45,3 +45,9 @@ uniqys dev-init
 
 After running the command, `uniqys.json`, `dapp.json`, `validatoKey.json` will be generated.
 Then, you can launch a node with `uniqys start`.
+
+When you need to delete the data of blockchain `.data`, use `init` command with `--reset` option.
+
+```bash
+$ uniqys init --reset
+```
