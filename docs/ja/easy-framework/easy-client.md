@@ -89,3 +89,15 @@ const easy = EasyClientForBrowser(baseUrl)
 #### 引数
 
 - **baseUrl**: アプリケーションのベースのURL。
+
+### EasyClientForWeb3
+`EasyClientForWeb3`は[web3](https://github.com/ethereum/web3.js)と連携し、MetamaskやQuragéなどの既存のウォレットの利用を可能にした`EasyClient`です。
+`EasyClient`を継承しています。
+
+```javascript
+const client = new Easy.EasyClientForWeb3(web3.currentProvider, baseUrl)
+```
+
+#### 引数
+
+- **baseUrl**: アプリケーションのベースのURL。

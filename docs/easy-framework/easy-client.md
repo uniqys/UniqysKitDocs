@@ -93,3 +93,14 @@ const easy = EasyClientForBrowser(baseUrl)
 #### Argument
 
 - **baseUrl**: Base URL for the application.
+
+### EasyClientForWeb3
+`EasyClientForWeb3` is an extended class of `EasyClient`, designed to use existing wallets, such as Metamask, Quragé, etc. with [web3](https://github.com/ethereum/web3.js).
+
+```javascript
+const client = new Easy.EasyClientForWeb3(web3.currentProvider, baseUrl)
+```
+
+#### Argument
+
+- **baseUrl**: Base URL for the application.
