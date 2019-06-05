@@ -96,7 +96,7 @@ const easy = new EasyClientForWeb3(web3.currentProvider, baseUrl)
 
 ## Usage via CDN
 In path `node_modules/@uniqys/easy-client/lib/easy.js` there is a pre-bundled Easy Client, so you may cast it from the server to use in the client side.
-`easy.js` instantiates [`EasyClientForBrowser`](#easyclientforbrowser) as `Browser` and[`EasyClientForWeb3`](#easyclientforweb3) as `Web3`.
+`easy.js` makes instances from the class [`EasyClientForBrowser`](#easyclientforbrowser) as `Browser` and from the class [`EasyClientForWeb3`](#easyclientforweb3) as `Web3`.
 
 ```html
 <script type="text/javascript" src="/path/to/easy.js"></script>
