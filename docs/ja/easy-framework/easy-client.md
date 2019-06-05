@@ -91,9 +91,9 @@ const easy = new EasyClientForWeb3(web3.currentProvider, baseUrl)
 
 - **baseUrl**: アプリケーションのベースのURL。
 
-## サーバーからの配信
+## CDN経由での利用
 `node_modules/@uniqys/easy-client/lib/easy.js`には既にバンドルされたEasy Clientがあり、サーバーから`easy.js`を配信することでクライアントで利用することができます。
-`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#easyclientforbrowser)と[`EasyClientForWeb3`](#easyclientforweb3)をexportしています。
+`easy.js`は、`Easy`というグローバルオブジェクトの中に[`EasyClientForBrowser`](#easyclientforbrowser)と[`EasyClientForWeb3`](#easyclientforweb3)のインスタンスをそれぞれ`Browser` と `Web3` という名前で生成します。
 
 ```html
 <script type="text/javascript" src="/path/to/easy.js"></script>
