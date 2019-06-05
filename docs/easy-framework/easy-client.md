@@ -17,17 +17,6 @@ $ npm install @uniqys/easy-client
 $ yarn add @uniqys/easy-client
 ```
 
-In path `node_modules/@uniqys/easy-client/lib/easy.js` there is a pre-bundled Easy Client, so you may cast it from the server to use in the client side.
-`easy.js` exports [`EasyClientForBrowser`](#easyclientforbrowser) with the name `Easy`.
-
-```html
-<script type="text/javascript" src="/path/to/easy.js"></script>
-<script type="text/javascript">
-const easy = new Easy.Browser(location.origin) // EasyClientForBrowser
-...
-</script>
-```
-
 ## API
 
 ### EasyClient
@@ -35,8 +24,8 @@ const easy = new Easy.Browser(location.origin) // EasyClientForBrowser
 Most users do not need to use this class.
 Use [`EasyClientForBrowser`](#easyclientforbrowser) for general DApps development.
 
-```
-const easy = EasyClient(signer, config)
+```js
+const easy = new EasyClient(signer, config)
 ```
 
 #### Argument
@@ -74,7 +63,7 @@ Methods to access the Outer API.
 
 For details of Outer API, please check [here](/easy-framework/api.md#outer-api).
 
-### EasyClientForBrowser
+## EasyClientForBrowser
 
 `EasyClientForBrowser` is an extended class of `EasyClient`, designed to use during development.
 `EasyClientForBrowser` shows alert when user signs a transaction.
@@ -86,21 +75,34 @@ We do not recommend using it in the product.
 An official wallet is not released yet, but when you are developing your own wallet, you should use the `EasyClient` class.
 :::
 
+```js
+const easy = new EasyClientForBrowser(baseUrl)
 ```
-const easy = EasyClientForBrowser(baseUrl)
+
+#### Argument
+
+- **baseUrl**: Base URL for the application.
+
+## EasyClientForWeb3
+`EasyClientForWeb3` is an extended class of `EasyClient`, designed to use existing wallets, such as Metamask, Quragé, etc. with [web3.js](https://github.com/ethereum/web3.js).
+
+```js
+const easy = new EasyClientForWeb3(web3.currentProvider, baseUrl)
 ```
 
 #### Argument
 
 - **baseUrl**: Base URL for the application.
 
-### EasyClientForWeb3
-`EasyClientForWeb3` is an extended class of `EasyClient`, designed to use existing wallets, such as Metamask, Quragé, etc. with [web3](https://github.com/ethereum/web3.js).
+## Cast from server
+In path `node_modules/@uniqys/easy-client/lib/easy.js` there is a pre-bundled Easy Client, so you may cast it from the server to use in the client side.
+`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#easyclientforbrowser)と[`EasyClientForWeb3`](#easyclientforweb3)をexportしています。
 
-```javascript
-const client = new Easy.EasyClientForWeb3(web3.currentProvider, baseUrl)
+```html
+<script type="text/javascript" src="/path/to/easy.js"></script>
+<script type="text/javascript">
+const easyBrowser = new Easy.Browser(location.origin) // EasyClientForBrowser
+const easyWeb3 = new Easy.Web3(web3.currentProvider, location.origin) // EasyClientForWeb3
+...
+</script>
 ```
-
-#### Argument
-
-- **baseUrl**: Base URL for the application.

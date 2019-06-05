@@ -17,23 +17,12 @@ $ npm install @uniqys/easy-client
 $ yarn add @uniqys/easy-client
 ```
 
-`node_modules/@uniqys/easy-client/lib/easy.js`には既にバンドルされたEasy Clientがあり、サーバーから`easy.js`を配信することでクライアントで利用することができます。
-`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#easyclientforbrowser)をexportしています。
-
-```html
-<script type="text/javascript" src="/path/to/easy.js"></script>
-<script type="text/javascript">
-const easy = new Easy.Browser(location.origin) // EasyClientForBrowser
-...
-</script>
-```
-
 ## API
 
 ### EasyClient
 
 ```js
-const easy = EasyClient(signer, config)
+const easy = new EasyClient(signer, config)
 ```
 
 #### 引数
@@ -71,7 +60,7 @@ Outer APIに接続するためのメソッドを利用できます。
 
 Outer APIの仕様に関しては、[こちら](/ja/easy-framework/api.md#outer-api)を確認してください。
 
-### EasyClientForBrowser
+## EasyClientForBrowser
 
 `EasyClientForBrowser`は開発時に用いる`EasyClient`です。`EasyClient`を継承しています。
 `EasyClientForBrowser`では、トランザクションに署名をする際にアラートを発火させます。
@@ -83,21 +72,34 @@ Outer APIの仕様に関しては、[こちら](/ja/easy-framework/api.md#outer-
 :::
 
 ```js
-const easy = EasyClientForBrowser(baseUrl)
+const easy = new EasyClientForBrowser(baseUrl)
 ```
 
 #### 引数
 
 - **baseUrl**: アプリケーションのベースのURL。
 
-### EasyClientForWeb3
-`EasyClientForWeb3`は[web3](https://github.com/ethereum/web3.js)と連携し、MetamaskやQuragéなどの既存のウォレットの利用を可能にした`EasyClient`です。
+## EasyClientForWeb3
+`EasyClientForWeb3`は[web3.js](https://github.com/ethereum/web3.js)と連携し、MetamaskやQuragéなどの既存のウォレットの利用を可能にした`EasyClient`です。
 `EasyClient`を継承しています。
 
-```javascript
-const client = new Easy.EasyClientForWeb3(web3.currentProvider, baseUrl)
+```js
+const easy = new EasyClientForWeb3(web3.currentProvider, baseUrl)
 ```
 
 #### 引数
 
 - **baseUrl**: アプリケーションのベースのURL。
+
+## サーバーからの配信
+`node_modules/@uniqys/easy-client/lib/easy.js`には既にバンドルされたEasy Clientがあり、サーバーから`easy.js`を配信することでクライアントで利用することができます。
+`easy.js`は、`Easy`という名前で[`EasyClientForBrowser`](#easyclientforbrowser)と[`EasyClientForWeb3`](#easyclientforweb3)をexportしています。
+
+```html
+<script type="text/javascript" src="/path/to/easy.js"></script>
+<script type="text/javascript">
+const easyBrowser = new Easy.Browser(location.origin) // EasyClientForBrowser
+const easyWeb3 = new Easy.Web3(web3.currentProvider, location.origin) // EasyClientForWeb3
+...
+</script>
+```
