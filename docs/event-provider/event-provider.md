@@ -8,19 +8,20 @@ Event Provider is a module that creates event transactions.
 Unlike normal transactions, proposers must include the event transactions to a designated block, or the block cannot be consented.
 
 ## Methods supposed to implement in Event Provider
-It is assumed that the follow two methods are implemented in Event Provider.
+It is assumed that the following two methods are implemented in Event Provider.
+The interfaces of these methods are defined in `@uniqys/dapp-interface`.
 
 ### `ready (): Promise<void>`
 This method is called when a DApp starts.
-It is to prepare for calling `getTransaction` method.
+It should be used to prepare for calling `getTransaction` method.
 
 ### `getTransactions (fromTimestamp: number, toTimestamp: number, nonce: number): Promise<Transaction[]>`
 This method gets a list of transactions issued by Event Provider.
 It is assumed to return a list of transactions issued from `fromTimestamp` to `toTimestamp`.
-The `nonce` is the next value of current nonce of Event.
+The `nonce` is the next value of the current nonce of Event.
 
-## Setting of dapp.json
-Event Provider is associated with DApp by adding `eventProvider` in dapp.json.
+## Settings of dapp.json
+You can use an Event Provider in a DApp by adding the `eventProvider` option in the config file `dapp.json`.
 
 | Key | Explanation |
 | --- | --- |

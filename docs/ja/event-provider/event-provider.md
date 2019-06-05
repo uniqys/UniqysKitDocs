@@ -10,6 +10,7 @@ Event Providerは、イベントトランザクションを発行します。
 
 ## Event Providerが実装すべきメソッド
 EventProviderは以下の2つのメソッドが実装されていることを想定しています。
+これらのメソッドのインターフェースは `@uniqys/dapp-interface` で定義されています。
 
 ### `ready (): Promise<void>`
 DAppの起動時に呼び出されるメソッドです。
@@ -21,7 +22,7 @@ Event Providerが発行するトランザクションのリストを取得する
 `nonce` には現在のEventのnonceの次の値を指定します。
 
 ## dapp.jsonの設定
-dapp.jsonに `eventProvider` を追加することで、DAppの起動時にEvent Providerと関連づけることができます。
+`dapp.json` に `eventProvider` を追加することで、DAppからEvent Providerを使用できます。
 
 | キー | 値の説明 |
 | --- | --- |
