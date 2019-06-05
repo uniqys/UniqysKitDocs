@@ -45,3 +45,9 @@ Easy Frameworkの概要と詳細を説明します。
 - [Easy Framework](/ja/easy-framework/easy-framework.md)
 - [Easy Client](/ja/easy-framework/easy-client.md)
 - [Outer API / Inner API](/ja/easy-framework/api.md)
+
+## Event Provider
+
+Event Providerの概要と詳細を説明します。
+
+- [Event Provider](/ja/event-provider/event-provider.md)
