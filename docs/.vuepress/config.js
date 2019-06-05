@@ -60,6 +60,13 @@ module.exports = {
               "/easy-framework/api",
               "/easy-framework/easy-client"
             ]
+          },
+          {
+            title: "Event Provider",
+            collapsable: false,
+            children: [
+              "/event-provider/event-provider"
+            ]
           }
         ]
       },
@@ -101,6 +108,13 @@ module.exports = {
               "/ja/easy-framework/easy-framework",
               "/ja/easy-framework/api",
               "/ja/easy-framework/easy-client"
+            ]
+          },
+          {
+            title: "Event Provider",
+            collapsable: false,
+            children: [
+              "/ja/event-provider/event-provider"
             ]
           }
         ]
