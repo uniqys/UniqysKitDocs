@@ -38,5 +38,5 @@ $ yarn global add @uniqys/cli
 
 ```bash
 $ uniqys -v
-0.3.4
+0.3.5
 ```
